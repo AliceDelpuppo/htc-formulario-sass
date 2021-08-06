@@ -1,0 +1,188 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+@import 'reset.scss';
+
+body {
+    @include flex-center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+h1 {
+    font-size: 37px;
+    font-weight: 700;
+    color: $tittle-color;
+    text-align: center;
+}
+
+label {
+    font-size: 14px;
+    color: $text-color;
+}
+
+input {
+    border: 1px solid $border-color;
+    padding-left: 16px;
+    color: $text-color;
+    font-size: 16px;
+
+    &::placeholder {
+        font-size: 14px;
+        color: $placeholder-color;
+    }
+
+    &:focus {
+        border: 2px solid $background-button-color;
+    }
+}
+
+a {
+    font-size: 14px;
+    color: $link-color;
+}
+
+.container-center-login {
+    
+    form#login {
+        width: $container-width-login;
+
+        h1 {
+            margin-bottom: 31px;
+        }
+
+        .field {
+            width: 100%;
+
+            .field-login {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    margin-bottom: 6px;
+                }
+
+                .input {
+                    height: 47px;                    
+                }
+
+                &:first-child {
+                    margin-bottom: 39px;
+                }
+
+                &:last-child {
+                    margin-bottom: 26px;
+                }
+            }            
+        }
+
+        .forget-password {
+            @include flex-center;
+            justify-content: space-between;
+
+            .forget-password-center {
+                display: flex;
+                align-items: center;
+                margin-bottom: 31px;
+                
+                #connect {
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        .button {
+            height: 47px;
+            width: 100%;
+            background-color: transparent;
+            font-size: 16px;
+            position: relative;
+            margin-bottom: 32px;
+            // z-index: 1;
+
+
+            &:hover {
+                letter-spacing: 1px;
+                cursor: pointer;                 
+                color: $text-button-color;
+            }
+            
+            // &::after {
+            //     content:'';
+            //     background-color: red;                
+            //     // box-shadow: inset 515px 0 0 0 red;
+            //     transition: all 1s ease;
+            //     transition: 0.5s;
+            //     position: absolute;
+            //     top: 0;
+            //     bottom: 0;
+            //     left: 50%;
+            //     right: 50%;
+                               
+            // }
+
+            // &:hover {
+            //     &::after {
+            //         left: 0;
+            //         right: 0;
+            //         z-index: -1;
+            //     }
+            // }
+
+            &::before {
+                content:'';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $background-button-color;
+                color: $text-button-color;
+                z-index: -1;
+                transition: transform 0.6s;
+                // transition: 0.4s;
+                transform-origin: bottom right;
+                transform: scale(0);     
+            }
+
+            &:hover {
+                &::before {
+                    color: $text-button-color;
+                    transition: transform 0.6s;
+                    // transition: 0.4s;
+                    transform-origin: top left;
+                    transform: scale(1);
+                }
+            }
+
+            &::after {
+                content:'';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                border: 2px solid $background-button-color;                
+                z-index: -1;
+                transition: transform 0.6s;
+                // transition: 0.5s;
+                transform-origin: top left;  
+                transform: scale(1); 
+            }
+
+            &:hover {
+                &::after {
+                    transition: transform 0.6s;
+                    transform-origin: bottom right;
+                    transform: scale(0);
+
+                }
+            }
+
+
+        }
+
+
+    }
+}
+
