@@ -149,6 +149,10 @@ a {
   transform-origin: bottom right;
   transform: scale(0);
 }
+.container-center-login form#login .footer {
+  display: flex;
+  justify-content: center;
+}
 
 .container-center-register {
   display: flex;
@@ -229,6 +233,7 @@ a {
   text-decoration: underline;
 }
 .container-center-register form#register button {
+  margin-bottom: 28px;
   width: 100%;
   height: 47px;
   border-radius: 5px;
@@ -257,6 +262,10 @@ a {
   border-radius: 5px;
   left: 0;
   right: 0;
+}
+.container-center-register form#register .footer {
+  display: flex;
+  justify-content: center;
 }
 
 .container-center-recovery {
@@ -298,10 +307,6 @@ a {
 .container-center-recovery form#recovery .button button:hover {
   letter-spacing: 1px;
   cursor: pointer;
-  background-color: #ffffff;
-  color: #323730;
-}
-.container-center-recovery form#recovery .button button:hover::after {
   background-color: #ffffff;
   color: #323730;
 }

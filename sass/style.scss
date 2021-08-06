@@ -148,9 +148,13 @@ a {
                     transition: transform 0.6s;
                     transform-origin: bottom right;
                     transform: scale(0);
-
                 }
             }
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
         }
     }
 }
@@ -253,6 +257,7 @@ a {
         }
 
         button {
+            margin-bottom: 28px;
             width: 100%;
             height: 47px;
             border-radius: 5px;
@@ -284,11 +289,13 @@ a {
                     border-radius: 5px;
                     left: 0;
                     right: 0;
-
                 }
             }
+        }
 
-
+        .footer {
+            display: flex;
+            justify-content: center;
         }
     }
 }
@@ -319,7 +326,6 @@ a {
         }
 
         .button {
-            
 
             button {
                 margin-bottom: 25px;
@@ -337,17 +343,11 @@ a {
                     letter-spacing: 1px;
                     cursor: pointer;
                     background-color: #ffffff;
-                    color: $text-color; 
-                }
-
-                &:hover {
-                    &::after {
-                        background-color: #ffffff;
-                        color: $text-color; 
-                    }
+                    color: $text-color;
+                    // transition: $time-transform-button-recovery; 
                 }
                                 
-                // ----
+                // ---- 1
 
                 span {
                     position: absolute;
@@ -374,7 +374,7 @@ a {
                     }
                 }
 
-                // ----
+                // ---- 2
 
                 span {
                     &:nth-child(2) {
@@ -396,7 +396,7 @@ a {
                     }
                 }
 
-                // ----
+                // ---- 3
 
                 span {
                     &:nth-child(3) {
@@ -418,7 +418,7 @@ a {
                     }
                 }
 
-                // ----
+                // ---- 4
 
                 span {
                     &:nth-child(4) {
@@ -428,8 +428,7 @@ a {
                         height: 2px;
                         transform: scaleX(0);
                         transform-origin: left;
-                        transition: transform $time-transform-button-recovery;
-                        
+                        transition: transform $time-transform-button-recovery;                        
                     }                   
                 }
 
@@ -439,31 +438,8 @@ a {
                         transform-origin: right;
                         transition: transform $time-transform-button-recovery;
                     }
-                }
-
-
-
-
-                
-
-                
-    
-                
-
-                
-    
-                
+                } 
             }
-
-            
-
-            
-
-            
-
-            
-
-            
         }
 
         .link-back {
