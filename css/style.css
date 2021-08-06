@@ -20,10 +20,6 @@ button {
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   background-color: #ffffff;
 }
 
@@ -34,7 +30,7 @@ h1 {
   text-align: center;
 }
 
-label {
+label, p, span {
   font-size: 14px;
   color: #323730;
 }
@@ -44,6 +40,7 @@ input {
   padding-left: 16px;
   color: #323730;
   font-size: 16px;
+  height: 47px;
 }
 input::placeholder {
   font-size: 14px;
@@ -51,6 +48,7 @@ input::placeholder {
 }
 input:focus {
   border: 2px solid #3F3D56;
+  border-radius: 5px;
 }
 
 a {
@@ -58,6 +56,12 @@ a {
   color: #1DB9E0;
 }
 
+.container-center-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 .container-center-login form#login {
   width: 515px;
 }
@@ -73,9 +77,6 @@ a {
 }
 .container-center-login form#login .field .field-login label {
   margin-bottom: 6px;
-}
-.container-center-login form#login .field .field-login .input {
-  height: 47px;
 }
 .container-center-login form#login .field .field-login:first-child {
   margin-bottom: 39px;
@@ -139,7 +140,6 @@ a {
   height: 100%;
   background-color: transparent;
   border: 2px solid #3F3D56;
-  z-index: -1;
   transition: transform 0.6s;
   transform-origin: top left;
   transform: scale(1);
@@ -148,6 +148,115 @@ a {
   transition: transform 0.6s;
   transform-origin: bottom right;
   transform: scale(0);
+}
+
+.container-center-register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container-center-register form#register {
+  width: 396px;
+}
+.container-center-register form#register h1 {
+  margin-bottom: 22px;
+}
+.container-center-register form#register .field-name {
+  display: flex;
+  flex-direction: column;
+}
+.container-center-register form#register .field-name label {
+  margin-bottom: 6px;
+}
+.container-center-register form#register .field-name input {
+  margin-bottom: 24px;
+}
+.container-center-register form#register .field-birth-country {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+.container-center-register form#register .field-birth-country label span {
+  color: red;
+}
+.container-center-register form#register .field-birth-country input {
+  width: 170px;
+}
+.container-center-register form#register .field-birth-country select {
+  width: 208px;
+  height: 47px;
+}
+.container-center-register form#register .field-birth-country select option {
+  color: #323730;
+  font-size: 14px;
+}
+.container-center-register form#register .field-genero .genero {
+  display: flex;
+  justify-content: space-between;
+}
+.container-center-register form#register .field-genero .genero .genero-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-center-register form#register .field-genero .genero .genero-align input {
+  margin-right: 6px;
+}
+.container-center-register form#register .field-email-password {
+  display: flex;
+  flex-direction: column;
+}
+.container-center-register form#register .field-email-password label {
+  margin-bottom: 6px;
+}
+.container-center-register form#register .field-email-password input {
+  margin-bottom: 22px;
+}
+.container-center-register form#register .field-email-password input:last-child {
+  margin-bottom: 28px;
+}
+.container-center-register form#register .terms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.container-center-register form#register .terms #terms {
+  margin-right: 10px;
+}
+.container-center-register form#register .terms span a {
+  text-decoration: underline;
+}
+.container-center-register form#register button {
+  width: 100%;
+  height: 47px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #3F3D56;
+  position: relative;
+  z-index: 1;
+}
+.container-center-register form#register button:hover {
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.container-center-register form#register button::after {
+  content: "";
+  position: absolute;
+  box-shadow: inset 396px 0 0 0 #575477;
+  transition: 0.5s;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  z-index: -1;
+}
+.container-center-register form#register button:hover::after {
+  border-radius: 5px;
+  left: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

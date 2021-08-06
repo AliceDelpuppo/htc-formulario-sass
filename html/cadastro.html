@@ -18,15 +18,16 @@
         <form id="register">
             <h1>Faça seu cadastro</h1>
 
-            <div class="field">
+            <div class="field-name">
                 <label for="name-register">Nome completo</label>
-                <input type="text" name="name-register" class="input" placeholder="Digite seu nome completo" required>
+                <input type="text" name="name-register" class="input" id="name-register"
+                    placeholder="Digite seu nome completo" required>
             </div>
 
-            <div class="field birth-country">
+            <div class="field-birth-country">
                 <div>
                     <label for="date-birth">Data de Nascimento</label>
-                    <input type="date" name="date-birth" class="input" required>
+                    <input type="date" name="date-birth" class="input" id="date-birth" required>
                 </div>
 
                 <div>
@@ -41,9 +42,11 @@
                 </div>
             </div>
 
-            <span class="genero">Gênero:</span>
+            <div class="field-genero">
+                <div>
+                    <span>Gênero:</span>
+                </div>
 
-            <div class="genero-margin">
                 <div class="genero">
                     <div class="genero-align">
                         <input type="radio" name="genero" id="feminine">
@@ -62,34 +65,35 @@
                 </div>
             </div>
 
-            <div class="field">
+            <div class="field-email-password">
                 <label for="email-register">E-mail</label>
-                <input type="email" name="email-register" class="input" placeholder="Digite seu email" required>
+                <input type="email" name="email-register" class="input" id="email-register"
+                    placeholder="Digite seu email" required>
 
                 <label for="password-register">Senha</label>
-                <input type="password" name="passwor-register" class="input" placeholder="Crie uma senha" required>
+                <input type="password" name="passwor-register" class="input" id="password-register"
+                    placeholder="Crie uma senha" required>
 
                 <label for="password-confirm">Confirme sua senha</label>
-                <input type="password" name="password-confirm" class="input" placeholder="Confirmar senha" required>
-
+                <input type="password" name="password-confirm" class="input" id="password-confirm"
+                    placeholder="Confirmar senha" required>
             </div>
 
             <div class="terms">
                 <div>
                     <input type="checkbox" name="terms" id="terms" required>
-                </div>
+                </div> 
 
-                <div>
-                    <span>Aceito os <a href="#" class="link">termos e condições</a> e concordo com as <a href="#" class="link">políticas de
-                            privacidade</a> do Hall To Code.
-                    </span>
+                <div>                   
+                    <span>Aceito os <a href="#" class="link">termos e condições</a> e concordo com as <a href="#" class="link">políticas de privacidade</a> do Hall To Code.</span>
                 </div>
             </div>
 
             <button type="submit" class="button">Cadastrar</button>
 
             <div class="footer">
-                <span>Já tem conta no Hall To Code? <a href="../login.html" target="_self" rel="prev" class="link">Entre agora</a>
+                <span>Já tem conta no Hall To Code? <a href="../login.html" target="_self" rel="prev" class="link">Entre
+                        agora</a>
                 </span>
             </div>
         </form>
