@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça seu login</title>
+
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-center">
+        <form id="login">
+            <h1>Faça seu login</h1>
+
+            <div class="field">
+                <div>
+                    <label for="email-login">E-mail</label>
+                    <input type="email" name="email-login" class="input" placeholder="Digite seu email" required>
+                </div>
+
+                <div>
+                    <label for="password-login">Senha</label>
+                    <input type="password" name="password-login" class="input" placeholder="Digite sua senha"
+                        required>
+                </div>
+            </div>
+
+            <div class="forget-password">
+                <div class="forget-password-center">
+                    <input type="checkbox" name="connect" class="input">
+                    <label for="connect">Mantenha-me conectado</label>
+                </div>
+
+                <a href="./html/redefinir-senha.html" target="_self" rel="next">Esqueci minha senha</a>
+            </div>
+
+            <button type="submit">Entrar</button>
+
+            <div class="footer">
+                <span>Ainda não tem conta?</span>
+
+                <a href="./html/cadastro.html" target="_self" rel="next">Cadastre-se</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
