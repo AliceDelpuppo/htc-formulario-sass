@@ -99,10 +99,10 @@ a {
   margin-right: 8px;
 }
 .container-center-login form#login .button {
-  height: 47px;
   width: 100%;
-  background-color: transparent;
+  height: 47px;
   font-size: 16px;
+  background-color: transparent;
   position: relative;
   margin-bottom: 32px;
 }
@@ -236,8 +236,8 @@ a {
   margin-bottom: 28px;
   width: 100%;
   height: 47px;
-  border-radius: 5px;
   font-size: 16px;
+  border-radius: 5px;
   color: #ffffff;
   background-color: #3F3D56;
   position: relative;
@@ -296,7 +296,6 @@ a {
   margin-bottom: 25px;
   width: 100%;
   height: 47px;
-  height: 500;
   font-size: 16px;
   background-color: #3F3D56;
   color: #ffffff;
