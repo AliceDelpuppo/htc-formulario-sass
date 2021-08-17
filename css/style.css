@@ -374,4 +374,84 @@ a {
   text-align: center;
 }
 
+@keyframes liquid {
+  0% {
+    transform: translate(-50%, -80%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -80%) rotate(360deg);
+  }
+}
+.container-test-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background-color: #EDF1FA;
+  position: relative;
+}
+.container-test-animation .test-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1C7FA6;
+  width: 200px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+}
+.container-test-animation .test-animation .text p {
+  position: relative;
+  z-index: 1;
+  color: #EDF1FA;
+  font-size: 20px;
+}
+.container-test-animation .test-animation .liquid {
+  position: absolute;
+  left: 50%;
+  top: -35px;
+  transform: translateX(-100px);
+  width: 200px;
+  height: 200px;
+  background: #1C7FA6;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 0.4s;
+}
+.container-test-animation .test-animation .liquid:hover {
+  top: -120px;
+}
+.container-test-animation .test-animation .liquid::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -85%);
+}
+.container-test-animation .test-animation .liquid::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -85%);
+}
+.container-test-animation .test-animation .liquid::before {
+  content: "";
+  border-radius: 45%;
+  background: rgba(0, 0, 0, 0.1);
+  animation: liquid 5s linear infinite;
+}
+.container-test-animation .test-animation .liquid::after {
+  content: "";
+  border-radius: 40%;
+  background: rgba(13, 13, 13, 0.5);
+  animation: liquid 10s linear infinite;
+}
+
 /*# sourceMappingURL=style.css.map */
