@@ -409,6 +409,9 @@ a {
   color: #EDF1FA;
   font-size: 20px;
 }
+.container-test-animation .test-animation:hover {
+  letter-spacing: 0.5px;
+}
 .container-test-animation .test-animation .liquid {
   position: absolute;
   left: 50%;
@@ -418,10 +421,10 @@ a {
   height: 200px;
   background: #1C7FA6;
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
-  transition: 0.4s;
+  transition: 0.3s;
 }
 .container-test-animation .test-animation .liquid:hover {
-  top: -120px;
+  top: -100px;
 }
 .container-test-animation .test-animation .liquid::before {
   content: "";

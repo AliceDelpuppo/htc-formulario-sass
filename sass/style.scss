@@ -450,7 +450,6 @@ a {
     0% {
         transform: translate(-50%, -80%) rotate(0deg);      
     }
-
     100% {
         transform: translate(-50%, -80%) rotate(360deg);      
     }
@@ -482,6 +481,10 @@ a {
                 font-size: 20px;
             }
         }
+
+        &:hover {            
+            letter-spacing: 0.5px;
+        }
     
         .liquid {
             position: absolute;
@@ -492,10 +495,10 @@ a {
             height: 200px;
             background: #1C7FA6;
             box-shadow: inset 0 0 50px rgba($color: #000000, $alpha: 0.5);
-            transition: 0.4s;
+            transition: 0.3s;
 
             &:hover {
-                top: -120px;
+                top: -100px;
             }
 
             &::before {
@@ -506,7 +509,6 @@ a {
                 top: 0;
                 left: 50%;
                 transform: translate(-50%, -85%);
-                // background: #000;                
             }
     
             &::after {
@@ -517,7 +519,6 @@ a {
                 top: 0;
                 left: 50%;
                 transform: translate(-50%, -85%);
-                // background: #000;
             }
 
             &::before {
@@ -536,4 +537,3 @@ a {
         }  
     }
 }
-
