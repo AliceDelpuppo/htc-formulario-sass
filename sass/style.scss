@@ -158,9 +158,9 @@ a {
                 0% {
                     transform: translate(-50%, -97%) rotate(0deg);      
                 }
-                // 50%{
-                //     transform: translate(-50%, -100%) rotate(90deg);  
-                // }
+                50%{
+                    transform: translate(-50%, -100%) rotate(180deg);  
+                }
                 100% {
                     transform: translate(-50%, -97%) rotate(360deg);      
                 }
@@ -168,18 +168,25 @@ a {
 
             @include flex-center;
             position: relative;
-            padding: 20px 50px;
-            width: 515px;
-            background: #3F3D56;
+            // padding: 20px 50px;
+            // width: 515px;
+            // background: #3F3D56;
 
             overflow: hidden;
-            cursor: pointer;
 
             .button {
+                @include flex-center;
                 position: relative;
                 z-index: 1;
                 color: #fff;
+                width: 515px;
+                height: 50px;
+                cursor: pointer;
 
+                &:hover {
+                    letter-spacing: 1px;
+                    box-shadow: inset 5px 5px 5px rgba($color: #000000, $alpha: 0.1);
+                }
             }            
 
             .liquid {
@@ -191,9 +198,9 @@ a {
                 background: #3F3D56;
                 transition: 0.3s;
 
-                &:hover {
-                    top: -100px;
-                }
+                // &:hover {
+                //     top: -100px;
+                // }
                 
                 &::before, &::after {
                     content: '';
@@ -204,8 +211,6 @@ a {
                     left: 50%;
                     transform: translate(-50%, -97%);
                     // background-color: black;
-
-                    
                 }
 
                 &::before {

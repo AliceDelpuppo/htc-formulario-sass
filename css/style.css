@@ -104,24 +104,33 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 20px 50px;
-  width: 515px;
-  background: #3F3D56;
   overflow: hidden;
-  cursor: pointer;
 }
 @keyframes liquid {
   0% {
     transform: translate(-50%, -97%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -100%) rotate(180deg);
   }
   100% {
     transform: translate(-50%, -97%) rotate(360deg);
   }
 }
 .container-center-login form#login .button-animation .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 1;
   color: #fff;
+  width: 515px;
+  height: 50px;
+  cursor: pointer;
+}
+.container-center-login form#login .button-animation .button:hover {
+  letter-spacing: 1px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 .container-center-login form#login .button-animation .liquid {
   position: absolute;
@@ -131,9 +140,6 @@ a {
   height: 60px;
   background: #3F3D56;
   transition: 0.3s;
-}
-.container-center-login form#login .button-animation .liquid:hover {
-  top: -100px;
 }
 .container-center-login form#login .button-animation .liquid::before, .container-center-login form#login .button-animation .liquid::after {
   content: "";
