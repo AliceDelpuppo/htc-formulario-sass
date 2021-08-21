@@ -89,65 +89,139 @@ a {
         }
 
         .button {
-            @include button-style;
-            background-color: transparent;
+        //     @include button-style;
+        //     background-color: transparent;
+        //     position: relative;
+        //     margin-bottom: 32px;
+
+            // &:hover {
+            //     letter-spacing: 1px;
+            //     cursor: pointer;                 
+            //     color: $text-button-color;
+            // }
+
+            // &::before {
+            //     content:'';
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-color: $background-button-color;
+            //     color: $text-button-color;
+            //     z-index: -1;
+            //     transition: transform 0.6s;
+            //     // transition: 1s;
+            //     transform-origin: bottom right;
+            //     transform: scale(0); 
+            // }
+
+            // &:hover {
+            //     &::before {
+            //         color: $text-button-color;
+            //         transition: transform 0.6s;
+            //         // transition: 1s;
+            //         transform-origin: top left;
+            //         transform: scale(1);
+            //     }
+            // }
+
+            // &::after {
+            //     content:'';
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     background-color: transparent;
+            //     border: 2px solid $background-button-color; 
+            //     transition: transform 0.6s;
+            //     // transition: 0.5s;
+            //     transform-origin: top left;  
+            //     transform: scale(1); 
+            // }
+
+            // &:hover {
+            //     &::after {
+            //         transition: transform 0.6s;
+            //         transform-origin: bottom right;
+            //         transform: scale(0);
+            //     }
+            // }
+        }
+
+        .button-animation {
+
+            margin-bottom: 30px;
+
+            @keyframes liquid {
+                0% {
+                    transform: translate(-50%, -97%) rotate(0deg);      
+                }
+                // 50%{
+                //     transform: translate(-50%, -100%) rotate(90deg);  
+                // }
+                100% {
+                    transform: translate(-50%, -97%) rotate(360deg);      
+                }
+            }
+
+            @include flex-center;
             position: relative;
-            margin-bottom: 32px;
+            padding: 20px 50px;
+            width: 515px;
+            background: #3F3D56;
 
-            &:hover {
-                letter-spacing: 1px;
-                cursor: pointer;                 
-                color: $text-button-color;
-            }
+            overflow: hidden;
+            cursor: pointer;
 
-            &::before {
-                content:'';
+            .button {
+                position: relative;
+                z-index: 1;
+                color: #fff;
+
+            }            
+
+            .liquid {
                 position: absolute;
-                top: 0;
                 left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: $background-button-color;
-                color: $text-button-color;
-                z-index: -1;
-                transition: transform 0.6s;
-                // transition: 1s;
-                transform-origin: bottom right;
-                transform: scale(0); 
-            }
+                top: 0;
+                width: 515px;
+                height: 60px;
+                background: #3F3D56;
+                transition: 0.3s;
 
-            &:hover {
+                &:hover {
+                    top: -100px;
+                }
+                
+                &::before, &::after {
+                    content: '';
+                    position: absolute;
+                    width: 200%;
+                    height: 1500%;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, -97%);
+                    // background-color: black;
+
+                    
+                }
+
                 &::before {
-                    color: $text-button-color;
-                    transition: transform 0.6s;
-                    // transition: 1s;
-                    transform-origin: top left;
-                    transform: scale(1);
+                    content: '';
+                    border-radius: 50%;
+                    background: rgba($color: #6d6994, $alpha: 0.8);
+                    animation: liquid 10s linear infinite;                
                 }
-            }
-
-            &::after {
-                content:'';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: transparent;
-                border: 2px solid $background-button-color; 
-                transition: transform 0.6s;
-                // transition: 0.5s;
-                transform-origin: top left;  
-                transform: scale(1); 
-            }
-
-            &:hover {
+    
                 &::after {
-                    transition: transform 0.6s;
-                    transform-origin: bottom right;
-                    transform: scale(0);
+                    content: '';
+                    border-radius: 45%;
+                    background: rgba($color: #6d6994, $alpha: 0.5);
+                    animation: liquid 10s linear infinite;
                 }
-            }
+            }            
         }
 
         .footer {
