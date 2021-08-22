@@ -99,6 +99,7 @@ a {
   margin-right: 8px;
 }
 .container-center-login form#login .button-animation {
+  background: #3F3D56;
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
@@ -123,7 +124,7 @@ a {
   align-items: center;
   position: relative;
   z-index: 1;
-  color: #fff;
+  color: #ffffff;
   width: 515px;
   height: 50px;
   cursor: pointer;
@@ -135,11 +136,8 @@ a {
 .container-center-login form#login .button-animation .liquid {
   position: absolute;
   left: 0;
-  top: 0;
   width: 515px;
   height: 60px;
-  background: #3F3D56;
-  transition: 0.3s;
 }
 .container-center-login form#login .button-animation .liquid::before, .container-center-login form#login .button-animation .liquid::after {
   content: "";

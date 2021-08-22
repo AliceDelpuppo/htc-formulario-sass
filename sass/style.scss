@@ -151,6 +151,7 @@ a {
         }
 
         .button-animation {
+            background: #3F3D56;
 
             margin-bottom: 30px;
 
@@ -168,19 +169,16 @@ a {
 
             @include flex-center;
             position: relative;
-            // padding: 20px 50px;
-            // width: 515px;
-            // background: #3F3D56;
-
             overflow: hidden;
 
             .button {
                 @include flex-center;
                 position: relative;
                 z-index: 1;
-                color: #fff;
+                color: #ffffff;
                 width: 515px;
                 height: 50px;
+                
                 cursor: pointer;
 
                 &:hover {
@@ -192,15 +190,8 @@ a {
             .liquid {
                 position: absolute;
                 left: 0;
-                top: 0;
                 width: 515px;
                 height: 60px;
-                background: #3F3D56;
-                transition: 0.3s;
-
-                // &:hover {
-                //     top: -100px;
-                // }
                 
                 &::before, &::after {
                     content: '';
