@@ -385,4 +385,8 @@ a {
   text-align: center;
 }
 
+.error {
+  background-color: red;
+}
+
 /*# sourceMappingURL=style.css.map */
