@@ -194,9 +194,6 @@ a {
   justify-content: space-between;
   margin-bottom: 22px;
 }
-.container-center-register form#register .field-birth-country label span {
-  color: red;
-}
 .container-center-register form#register .field-birth-country input {
   width: 170px;
 }
@@ -388,7 +385,26 @@ a {
 }
 
 .error {
-  background-color: #cc000e56;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+@keyframes animation-button-submit {}
+.error-submit {
+  border: 1px solid red;
+  background-color: rgba(204, 0, 14, 0.1);
+}
+
+.error-terms-text {
+  color: red;
+}
+
+.alert-error-terms {
+  text-align: center;
+  margin-top: 5px;
+}
+.alert-error-terms p {
+  font-size: 16px;
+  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */

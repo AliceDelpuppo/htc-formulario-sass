@@ -4,13 +4,17 @@ const $birthDate = document.querySelector('#register input[data-type="birth-date
 const $password = document.querySelector('#register input[data-type="password"]')
 const $passwordConfirm = document.querySelector('#register input[data-type="password-confirm"]')
 
+const $buttonSubmit = document.querySelector('#register .button')
+const $inputs = document.querySelectorAll('#register input')
+
+const TIME_OFF = 2000
+
 const REGEX_DICTIONARY = {
     name: /^[a-zzáàâãéèêíóôõúç][a-zzáàâãéèêíóôõúç ]*$/i,
     email: /^[a-z][^@ ]*[@][a-z]+([.][a-z]+)+$/i,
     birthDate: /[^0-9]/g
 }
 
-// ------ Página de cadastro
 function validateInput() {
     const value = this.value
     const dataType = this.dataset.type
@@ -27,8 +31,21 @@ function validateInput() {
     }
 }
 
+function validatePassword() {
+    if($password.value == $passwordConfirm.value || $passwordConfirm.value == '') {
+        $password.classList.remove('error')
+        $passwordConfirm.classList.remove('error')
+    } else {
+        $password.classList.add('error')
+        $passwordConfirm.classList.add('error')
+    }
+}
+
 $name.addEventListener('input', validateInput)
+
 $email.addEventListener('input', validateInput)
+
+$passwordConfirm.addEventListener('input', validatePassword)
 
 $birthDate.addEventListener('input', function () {
     const regex = REGEX_DICTIONARY.birthDate
@@ -62,3 +79,38 @@ $birthDate.addEventListener('focus', function () {
 
     this.value = value
 })
+
+$buttonSubmit.addEventListener('click', function (event) {
+    const $termChecked = document.querySelector('.terms #terms:checked')
+    // const $termChecked = document.querySelector('.terms input[data-type="terms"]:checked')
+
+    event.preventDefault()
+    $inputs.forEach(function ($input) {
+
+        if (!$input.value) {
+            $input.classList.add('error-submit')
+            setTimeout(() => {
+                $input.classList.remove('error-submit')
+            }, TIME_OFF);
+        }
+    });
+
+    if (!$termChecked) {
+        console.log('marcar termos')
+        const $textTerms = document.querySelector('.terms span')
+        const $textAlertTerms = document.querySelector('.terms .alert-error-terms')
+
+        $textTerms.classList.add('error-terms-text')
+
+        const pCreated = document.createElement('p')
+        const textCreated = document.createTextNode('Necessário aceitar os termos')
+        pCreated.appendChild(textCreated)
+        $textAlertTerms.appendChild(pCreated)
+
+        setTimeout(() => {
+            $textTerms.classList.remove('error-terms-text')
+            $textAlertTerms.removeChild(pCreated)
+        }, TIME_OFF);
+    }
+})
+

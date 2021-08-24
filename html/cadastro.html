@@ -63,7 +63,7 @@
             <div class="field-email-password">
                 <label>E-mail<input type="text" class="input" data-type="email" placeholder="Digite seu email"></label>
 
-                <label>Senha<input class="input" data-type="password" placeholder="Crie uma senha"></label>
+                <label>Senha<input type="password" class="input" data-type="password" placeholder="Crie uma senha"></label>
 
                 <label>Confirme sua senha<input type="password" class="input" data-type="password-confirm" placeholder="Confirmar senha"></label>
 
@@ -71,11 +71,12 @@
 
             <div class="terms">
                 <div>
-                    <input type="checkbox" name="terms" id="terms">
+                    <input type="checkbox" id="terms" data-type="terms">
                 </div>
 
                 <div>
                     <span>Aceito os <a href="#" class="link">termos e condições</a> e concordo com as <a href="#" class="link">políticas de privacidade</a> do Hall To Code.</span>
+                    <div class="alert-error-terms"></div>
                 </div>
             </div>
 
