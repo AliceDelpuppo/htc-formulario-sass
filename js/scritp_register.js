@@ -1,7 +1,8 @@
-const $name = document.querySelector('input[data-type="name"]')
-const $email = document.querySelector('input[data-type="email"]')
-
-const $birthDate = document.querySelector('.input[data-type="birth-date"]')
+const $name = document.querySelector('#register input[data-type="name"]')
+const $email = document.querySelector('#register input[data-type="email"]')
+const $birthDate = document.querySelector('#register input[data-type="birth-date"]')
+const $password = document.querySelector('#register input[data-type="password"]')
+const $passwordConfirm = document.querySelector('#register input[data-type="password-confirm"]')
 
 const REGEX_DICTIONARY = {
     name: /^[a-zzáàâãéèêíóôõúç][a-zzáàâãéèêíóôõúç ]*$/i,
@@ -9,6 +10,7 @@ const REGEX_DICTIONARY = {
     birthDate: /[^0-9]/g
 }
 
+// ------ Página de cadastro
 function validateInput() {
     const value = this.value
     const dataType = this.dataset.type
@@ -60,4 +62,3 @@ $birthDate.addEventListener('focus', function () {
 
     this.value = value
 })
-
