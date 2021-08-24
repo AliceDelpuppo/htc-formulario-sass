@@ -388,10 +388,27 @@ a {
   background-color: rgba(255, 0, 0, 0.1);
 }
 
-@keyframes animation-button-submit {}
+@keyframes animation-button-submit {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 .error-submit {
   border: 1px solid red;
-  background-color: rgba(204, 0, 14, 0.1);
+  background-color: rgba(204, 0, 14, 0.05);
+  animation: animation-button-submit 0.3s;
 }
 
 .error-terms-text {

@@ -3,6 +3,7 @@ const $email = document.querySelector('#register input[data-type="email"]')
 const $birthDate = document.querySelector('#register input[data-type="birth-date"]')
 const $password = document.querySelector('#register input[data-type="password"]')
 const $passwordConfirm = document.querySelector('#register input[data-type="password-confirm"]')
+const $countrySelect = document.querySelector('#country')
 
 const $buttonSubmit = document.querySelector('#register .button')
 const $inputs = document.querySelectorAll('#register input')
@@ -22,7 +23,7 @@ function validateInput() {
     const regex = REGEX_DICTIONARY[dataType]
 
     const match = value.match(regex)
-    console.log(match)
+    // console.log(match)
 
     if (match || value == "") {
         this.classList.remove('error')
@@ -38,6 +39,37 @@ function validatePassword() {
     } else {
         $password.classList.add('error')
         $passwordConfirm.classList.add('error')
+    }
+}
+
+function validadeSelect(){
+    if($countrySelect.value == 'Selecionar') {
+        $countrySelect.classList.add('error-submit')
+        setTimeout(() => {
+            $countrySelect.classList.remove('error-submit')
+        }, TIME_OFF);
+    }
+}
+
+function validadeCheckTerms(){
+    const $termChecked = document.querySelector('.terms #terms:checked')
+    // const $termChecked = document.querySelector('.terms input[data-type="terms"]:checked')
+
+    if (!$termChecked) {
+        const $textTerms = document.querySelector('.terms span')
+        const $textAlertTerms = document.querySelector('.terms .alert-error-terms')
+
+        $textTerms.classList.add('error-terms-text')
+
+        const pCreated = document.createElement('p')
+        const textCreated = document.createTextNode('Necessário aceitar os termos')
+        pCreated.appendChild(textCreated)
+        $textAlertTerms.appendChild(pCreated)
+
+        setTimeout(() => {
+            $textTerms.classList.remove('error-terms-text')
+            $textAlertTerms.removeChild(pCreated)
+        }, TIME_OFF);
     }
 }
 
@@ -81,10 +113,10 @@ $birthDate.addEventListener('focus', function () {
 })
 
 $buttonSubmit.addEventListener('click', function (event) {
-    const $termChecked = document.querySelector('.terms #terms:checked')
-    // const $termChecked = document.querySelector('.terms input[data-type="terms"]:checked')
-
     event.preventDefault()
+    validadeSelect()
+    validadeCheckTerms()
+    
     $inputs.forEach(function ($input) {
 
         if (!$input.value) {
@@ -95,22 +127,5 @@ $buttonSubmit.addEventListener('click', function (event) {
         }
     });
 
-    if (!$termChecked) {
-        console.log('marcar termos')
-        const $textTerms = document.querySelector('.terms span')
-        const $textAlertTerms = document.querySelector('.terms .alert-error-terms')
-
-        $textTerms.classList.add('error-terms-text')
-
-        const pCreated = document.createElement('p')
-        const textCreated = document.createTextNode('Necessário aceitar os termos')
-        pCreated.appendChild(textCreated)
-        $textAlertTerms.appendChild(pCreated)
-
-        setTimeout(() => {
-            $textTerms.classList.remove('error-terms-text')
-            $textAlertTerms.removeChild(pCreated)
-        }, TIME_OFF);
-    }
 })
 
