@@ -60,3 +60,4 @@ $birthDate.addEventListener('focus', function () {
 
     this.value = value
 })
+
