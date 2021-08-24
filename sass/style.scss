@@ -260,12 +260,6 @@ a {
             justify-content: space-between;
             margin-bottom: 22px;
 
-            label {          
-                span {
-                    color: red;
-                }
-            }
-
             input {
                 width: 170px;
             }
@@ -329,7 +323,8 @@ a {
                 a {
                     text-decoration: underline;
                 }
-            }            
+
+            } 
         }
 
         button {
@@ -525,5 +520,42 @@ a {
 }
 
 .error {
-    background-color: #cc000e56;
+    background-color: rgba($color: red, $alpha: 0.1);
+}
+
+@keyframes animation-button-submit {
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(-10px);
+    }
+    50%{
+        transform: translateX(0px);
+    }
+    75%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.error-submit {
+    border: 1px solid red;
+    background-color: rgba($color: #CC000E, $alpha: 0.05);
+    animation: animation-button-submit 0.3s;
+}
+   
+.error-terms-text {
+    color: red;
+}
+
+.alert-error-terms {
+    text-align: center;
+    margin-top: 5px;
+    p {
+        font-size: 16px;
+        color: red;
+    }
 }
