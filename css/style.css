@@ -30,6 +30,11 @@ h1 {
   text-align: center;
 }
 
+label {
+  display: flex;
+  flex-direction: column;
+}
+
 label, p, span {
   font-size: 14px;
   color: #323730;
@@ -177,10 +182,6 @@ a {
 .container-center-register form#register h1 {
   margin-bottom: 22px;
 }
-.container-center-register form#register .field-name {
-  display: flex;
-  flex-direction: column;
-}
 .container-center-register form#register .field-name label {
   margin-bottom: 6px;
 }
@@ -189,6 +190,7 @@ a {
 }
 .container-center-register form#register .field-birth-country {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 22px;
 }
@@ -210,13 +212,13 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.container-center-register form#register .field-genero .genero .genero-align {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .container-center-register form#register .field-genero .genero .genero-align input {
   margin-right: 6px;
+}
+.container-center-register form#register .field-genero .genero .genero-align label {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 .container-center-register form#register .field-email-password {
   display: flex;
@@ -386,7 +388,7 @@ a {
 }
 
 .error {
-  background-color: red;
+  background-color: #cc000e56;
 }
 
 /*# sourceMappingURL=style.css.map */

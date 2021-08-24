@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faça seu login</title>
 
+    <script src="js/script.js" defer></script>
+
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="css/style.css">
@@ -19,15 +21,11 @@
 
             <div class="field">
                 <div class="field-login">
-                    <label for="email-login">E-mail</label>
-                    <input type="email" name="email-login" class="input" id="email-login" placeholder="Digite seu email"
-                        required>
+                    <label>E-mail<input type="text" class="input" data-type="email" placeholder="Digite seu email"></label>
                 </div>
 
                 <div class="field-login">
-                    <label for="password-login">Senha</label>
-                    <input type="password" name="password-login" id="password-login" class="input"
-                        placeholder="Digite sua senha" required>
+                    <label>Senha<input class="input" data-type="password" placeholder="Digite sua senha"></label>
                 </div>
             </div>
 
@@ -46,15 +44,10 @@
             </div>
 
             <div class="footer">
-                <span>Ainda não tem conta? <a href="html/cadastro.html" target="_self" rel="next"
-                        class="link">Cadastre-se</a></span>
-
+                <span>Ainda não tem conta? <a href="html/cadastro.html" target="_self" rel="next" class="link">Cadastre-se</a></span>
             </div>
         </form>
     </div>
-
-
-
 
 </body>
 

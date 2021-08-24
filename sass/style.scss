@@ -13,6 +13,10 @@ h1 {
     text-align: center;
 }
 
+label {
+    @include flex-column;
+}
+
 label, p, span {
     font-size: 14px;
     color: $text-color;
@@ -240,10 +244,9 @@ a {
         }
 
         .field-name {
-            @include flex-column;
 
             label {
-                margin-bottom: 6px;
+                margin-bottom: 6px;                
             }
 
             input {
@@ -253,6 +256,7 @@ a {
 
         .field-birth-country {
             display: flex;
+            align-items: center;
             justify-content: space-between;
             margin-bottom: 22px;
 
@@ -282,12 +286,16 @@ a {
             .genero {
                 display: flex;
                 justify-content: space-between;
-
+                
                 .genero-align {
-                    @include flex-center;
-
                     input {
                         margin-right: 6px;
+                    }
+                    
+                    label {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
                     }
                 }
             }
@@ -517,5 +525,5 @@ a {
 }
 
 .error {
-    background-color: red;
+    background-color: #cc000e56;
 }
